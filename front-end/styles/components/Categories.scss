@@ -1,0 +1,9 @@
+.Categories {
+  @include setFlex(column, flex-start, flex-start);
+  width: 100%;
+  padding: $default-offset-a;
+
+  .menu-item-caption {
+    padding: $default-offset-a;
+  }
+}

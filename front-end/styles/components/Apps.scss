@@ -1,0 +1,14 @@
+.Apps {
+  @include setFlex(row, flex-start, flex-start);
+  width: 100%;
+
+  .wrapper {
+    display: block;
+    padding: $default-offset-b;
+    width: 100%;
+
+    .AppsItem:hover {
+      border: 1px solid $color-blue;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --port 8080 --open --hot",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "mylchenko alexander",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^0.23.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "antd": "^4.16.7",
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.5.2",
+    "react": "^16.5.2",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  }
+}

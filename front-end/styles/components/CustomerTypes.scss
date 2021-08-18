@@ -1,0 +1,9 @@
+.CustomerTypes {
+  @include setFlex(column, flex-start, flex-start);
+  width: 100%;
+  padding: $default-offset-a;
+
+  .customer-types {
+    width: 100%;
+  }
+}

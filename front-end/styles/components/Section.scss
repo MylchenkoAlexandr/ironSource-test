@@ -1,0 +1,7 @@
+.Section {
+  @include setFlex(column) ;
+  max-width: $default-width-max;
+  width: 100%;
+  border-radius: $default-border-radius;
+  margin-bottom: 2em;
+}

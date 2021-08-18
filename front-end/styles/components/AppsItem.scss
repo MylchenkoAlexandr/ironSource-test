@@ -1,0 +1,22 @@
+.AppsItem {
+  @include setFlex(row, space-between, center);
+  padding: $default-offset-b;
+  width: calc(100% / 3 );
+  float: left;
+  border-radius: $default-border-radius;
+  border: 1px solid transparent;
+
+  & > .app-info {
+    padding: $default-offset-b;
+
+    & > div {
+      span {
+        font-weight: bolder;
+        padding-right: $default-offset-c;
+      }
+    }
+  }
+  &:hover {
+    border: 1px solid $color-white;
+  }
+}

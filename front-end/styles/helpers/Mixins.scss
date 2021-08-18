@@ -1,0 +1,49 @@
+@mixin setFlex( $flex-direction: column, $justify-content: flex-start, $align-items: flex-start ) {
+  display: flex ;
+  flex-direction: $flex-direction ;
+  justify-content: $justify-content ;
+  align-items: $align-items ;
+}
+@mixin disableTextSelection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@mixin setButton( $background-color: $color-red, $color: $color-black, $border: $color-red-a ) {
+
+  $border-color-darken: darken( $border, $default-half ) ;
+
+  @include disableTextSelection() ;
+  cursor: pointer ;
+  padding: $default-offset-b $default-offset-a ;
+  color: $color ;
+
+  &[data-selected] {
+    margin-left: $default-offset-c ;
+    font-weight: bolder;
+    border: 1px solid transparent ;
+  }
+  &[data-selected="true"] {
+    border-radius: $default-border-radius ;
+    background: $background-color ;
+    color: $color-white ;
+  }
+  &:hover[data-selected="false"] {
+    border-radius: $default-border-radius ;
+    color: $color-white ;
+    background: $color-black ;
+  }
+}
+@mixin setScreenWidth( $width ) {
+  @media only screen and ( max-width: $width ) {
+    @content;
+  }
+}
+@mixin disableLineBreaks() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,27 @@
+$default-blur: 10px ;
+$default-font-size: 14px ;
+$default-width-max: 800px ;
+$default-border-radius: 3px ;
+$default-half: .5 ;
+$default-half-a: 5% ;
+$default-offset-a: 1em ;
+$default-offset-b: calc( #{ $default-offset-a } / 2 ) ;
+$default-offset-c: calc( #{ $default-offset-b } / 2 ) ;
+
+$default-mobile-width-a: 320px ;
+$default-background-color: #e7e7e7;
+$section-header-menu-limit-width: 42em ;
+
+$color-white: white ;
+$color-black: black ;
+$color-gray: #ededed ;
+$color-gray-a: darken( $color-gray, $default-half-a ) ;
+$color-gray-b: darken( $color-gray-a, $default-half-a ) ;
+$color-red: red ;
+$color-red-a: darken( $color-red, $default-half-a ) ;
+$color-yellow: #fe9a00;
+$color-yellow-a: #fe5000;
+$color-green: #328e00;
+$color-green-a: darken( $color-green, $default-half-a ) ;
+$color-blue: #187ae4 ;
+$color-blue-a: darken( $color-blue, $default-half-a ) ;

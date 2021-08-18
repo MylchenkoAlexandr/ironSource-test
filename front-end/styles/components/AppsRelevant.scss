@@ -1,0 +1,17 @@
+.AppsRelevant {
+  @include setFlex(row, flex-start, flex-start);
+  width: 100%;
+  border-radius: $default-border-radius;
+  color: $color-white ;
+  background-color: $color-blue ;
+
+  .wrapper {
+    display: block;
+    width: 100%;
+    padding: $default-offset-b ;
+
+    &> .AppsItem {
+      padding: $default-offset-b ;
+    }
+  }
+}
