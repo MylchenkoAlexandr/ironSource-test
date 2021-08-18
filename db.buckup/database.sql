@@ -28,20 +28,20 @@ CREATE TABLE IF NOT EXISTS `applications` (
   KEY `_id` (`_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы aura_test_db.applications: ~10 rows (приблизительно)
+-- Дамп данных таблицы aura_test_db.applications: ~12 rows (приблизительно)
 /*!40000 ALTER TABLE `applications` DISABLE KEYS */;
 REPLACE INTO `applications` (`_id`, `name`, `rank`) VALUES
 	(1, 'WhatsUp', 0),
-	(2, 'Instagram', 0),
-	(3, 'Spotify', 2),
-	(4, 'Facebook', 0),
+	(2, 'Instagram', 1),
+	(3, 'Spotify', 0),
+	(4, 'Facebook', 1),
 	(5, 'MixCloud', 0),
-	(6, 'SoundCloud', 0),
-	(7, 'ImgBB', 2),
-	(8, 'DeviantantART', 0),
-	(9, 'GitHub', 0),
+	(6, 'SoundCloud', 1),
+	(7, 'ImgBB', 0),
+	(8, 'DeviantantART', 2),
+	(9, 'GitHub', 3),
 	(10, 'BitBucket', 0),
-	(11, 'Habrahabr', 0),
+	(11, 'Habrahabr', 3),
 	(12, 'Yaplakal', 1);
 /*!40000 ALTER TABLE `applications` ENABLE KEYS */;
 
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `ranks_cross` (
   CONSTRAINT `FK_ranks_cross_categories` FOREIGN KEY (`category_id`) REFERENCES `categories` (`_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы aura_test_db.ranks_cross: ~16 rows (приблизительно)
+-- Дамп данных таблицы aura_test_db.ranks_cross: ~19 rows (приблизительно)
 /*!40000 ALTER TABLE `ranks_cross` DISABLE KEYS */;
 REPLACE INTO `ranks_cross` (`_id`, `category_id`, `application_id`) VALUES
 	(10, 1, 1),
@@ -174,7 +174,7 @@ CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `ranks_cross_view` AS SELEC
 FROM ranks_cross rc
 LEFT JOIN applications app ON app._id = rc.application_id
 LEFT JOIN categories ct ON ct._id = rc.category_id
-ORDER BY app.name ;
+ORDER BY app._id ;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

@@ -1,0 +1,9 @@
+/build
+/.idea
+/.idea/*
+/.node_modules
+/.node_modules/*
+*node_modules/*
+**/node_modules
+logs
+*.log*

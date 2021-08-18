@@ -1,5 +1,6 @@
 .AppsRelevant {
   @include setFlex(row, flex-start, flex-start);
+  @include disableTextSelection();
   width: 100%;
   border-radius: $default-border-radius;
   color: $color-white ;
